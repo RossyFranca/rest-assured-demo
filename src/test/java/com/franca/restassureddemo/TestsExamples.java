@@ -4,7 +4,7 @@ import com.franca.restassureddemo.utils.TestConfig;
 import com.franca.restassureddemo.utils.YamlReader;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
