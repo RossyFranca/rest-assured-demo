@@ -1,2 +1,10 @@
 # rest-assured-demo
-POC com restassured acessando chat-gpt
+
+
+# Requiriments
+ [Java 17](https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.exe)
+# Configurations
+# Installation
+
+ - 
+
