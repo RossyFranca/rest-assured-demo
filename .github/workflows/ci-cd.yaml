@@ -25,4 +25,4 @@ jobs:
       - name: prepare tests
         run: docker run -d -p 3000:3000 paulogoncalvesbh/serverest:latest
       - name: Run Tests
-        run: mvn clean test -Dit.test=AlltestsSuit verify -DskipUTs=true
+        run: mvn clean test
