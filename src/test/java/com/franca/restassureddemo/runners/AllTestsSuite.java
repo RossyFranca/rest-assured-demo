@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
     TestsExamples.class
 })
-public class AllTests {
+public class AllTestsSuite {
 
 
 }
