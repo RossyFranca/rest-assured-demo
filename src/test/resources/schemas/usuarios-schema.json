@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "quantidade": {
+      "type": "integer"
+    },
+    "usuarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

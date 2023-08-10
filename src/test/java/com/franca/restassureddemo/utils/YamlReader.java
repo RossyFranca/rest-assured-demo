@@ -13,4 +13,12 @@ public class YamlReader {
 
         return valuesMap.get("local").get("url");
     }
+
+    public static String getSchema(String classSchema){
+        Yaml yaml = new Yaml();
+        InputStream inputStream = YamlReader.class.getClassLoader().getResourceAsStream("application.yaml");
+        Map<String, Map<String, String>> valuesMap = yaml.load(inputStream);
+
+        return valuesMap.get("schema").get(classSchema);
+    }
 }

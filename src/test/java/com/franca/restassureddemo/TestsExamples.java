@@ -3,16 +3,11 @@ package com.franca.restassureddemo;
 import com.franca.restassureddemo.utils.YamlReader;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-import org.yaml.snakeyaml.Yaml;
-
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -33,7 +28,12 @@ public class TestsExamples {
 
         Response response = given().get("http://localhost:3000/usuarios").thenReturn();
         System.out.println(response.getStatusCode());
-        System.out.println(response.getBody().asString());
+       // System.out.println(response.getBody().asString());
+        String responseJson = response.asString();
+        System.out.println(responseJson);
+       response.then().body(matchesJsonSchemaInClasspath("schemas/usuarios-schema.json"));
+
+
 
     }
 @TestConfiguration

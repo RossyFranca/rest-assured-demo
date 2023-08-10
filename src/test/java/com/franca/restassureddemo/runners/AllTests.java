@@ -1,4 +1,4 @@
-package runners;
+package com.franca.restassureddemo.runners;
 
 import com.franca.restassureddemo.TestsExamples;
 import org.junit.runner.RunWith;
